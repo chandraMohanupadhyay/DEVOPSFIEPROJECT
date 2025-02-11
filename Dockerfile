@@ -15,6 +15,6 @@ RUN go build -o main .
 FROM gcr.io/distroless/base
 
 COPY --from=base /app/main .
-Copy --from=base /app/static ./static
+COPY --from=base /app/static ./static
 EXPOSE 8080
 CMD ["./main"]
